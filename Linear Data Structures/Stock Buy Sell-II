@@ -1,0 +1,19 @@
+var maxProfit = function(prices) {
+   let A= prices;
+   let sum=0;
+
+   for(let i=0;i<A.length;i++){
+       let start= i;
+       while(A[i]<A[i+1] && i+1<A.length){
+           i++;
+           
+       }
+
+       if(A[start]<A[i] && start!=i ){
+            sum+=(A[i]-A[start]);
+       }
+
+   }
+
+   return sum;
+}
